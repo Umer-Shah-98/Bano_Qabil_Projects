@@ -122,9 +122,10 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: -2.57%;
 
 }
-.cookie{
+.cookies{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,6 +168,8 @@ img{
     font-size: 14px;
     /* grid-auto-flow: row; */
     text-align: center;
+    margin-right: 3%;
+    margin-left: 5%;
 }
 
 .foot-row{
@@ -176,4 +179,183 @@ img{
     margin-top: 5%;
     height: 70px;
     /* background-color: gold; */
+    margin-bottom: -3%;
 }
+@keyframes chipLighter {
+    0% {
+      opacity: 0;
+      transform: rotate(0turn);
+    }
+    5% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(12turn);
+    }
+  }
+  
+  /* Make the darker cookie chips scale */
+  @keyframes chipDarker {
+    0% {
+      opacity: 0;
+      transform: scale(3);
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Make the lighter cookie strokes zoom in and zoom out  */
+  @keyframes lighterStrokes {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    5% {
+      opacity: 1;
+    }
+    25% {
+      transform: scale(0.6);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+    75% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Make the darker cookie strokes zoom out and zoom in  */
+  @keyframes darkerStrokes {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    5% {
+      opacity: 1;
+    }
+    25% {
+      transform: scale(1.4);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    75% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* The drawing & fill in animation for the left circle  */
+  @keyframes drawing {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes fillIn {
+    0% {
+      fill: #fff;
+    }
+    100% {
+      fill: #A5694B;
+    }
+  }
+  
+  /* The appear animation for the right circle & the small chunks */
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .cookie {
+    max-width: 200px;
+    height: 45px;
+    margin-left: 40%;
+    position:static;
+    margin-top: 10px;
+    align-self: center;
+  }
+  
+  .circle-right {
+    fill: #B97850;
+    animation: appear .2s 3s backwards;
+  }
+  
+  .circle-left {
+    fill: #fff;
+    stroke: #A5694B;
+    stroke-width: 2;
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: drawing 3s linear forwards, fillIn .5s 2s forwards;
+  }
+  
+  .chocolate-chip-lighter {
+    fill: #734B46;
+    transform-origin: center;
+    transition: .4s;
+    animation: chipLighter 5s 4s ease-in-out backwards;
+  }
+  .chocolate-chip-lighter:hover {
+    transform: rotate(360deg);
+  }
+  
+  .chocolate-chip-darker {
+    fill: #644141;
+    transform-origin: center;
+    transition: .4s;
+    animation: chipDarker 2s 15s linear backwards;
+  }
+  .chocolate-chip-darker:hover {
+    fill: #C98850;
+  }
+  
+  .stroke-lighter {
+    fill: #C98850;
+    transition: .4s;
+    transform-origin: center;
+    animation: lighterStrokes 2s 20s linear backwards;
+  }
+  .stroke-lighter:hover {
+    transform: scale(1.5);
+  }
+  
+  .stroke-darker {
+    fill: #925F4A;
+    transition: .4s;
+    transform-origin: center;
+    animation: darkerStrokes 2s 20s linear backwards;
+  }
+  .stroke-darker:hover {
+    transform: scale(.7);
+  }
+  
+  
+  .cookie-burst-lighter {
+    fill: #B97850;
+    animation: appear .4s 22s backwards;
+  }
+  .cookie-burst-darker {
+    fill: #A5694B;
+    animation: appear .4s 22s backwards;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .cookie {
+      max-width: 300px;
+    }
+  }
+  
