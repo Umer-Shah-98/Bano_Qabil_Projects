@@ -12,7 +12,7 @@ font-family: 'Open Sans', sans-serif;
 
 form{
     /* display: block; */
-    margin-top: 0em;
+    /* margin-top: 0em; */
 }
 
 input[type=email]{
@@ -43,7 +43,7 @@ input[type=email]{
     /* outline: 0; */
     
 }
-.main{
+.my-section{
     /* background-color: #2f53a4; */
     width: 100%;
     display: flex;
@@ -56,7 +56,7 @@ input[type=email]{
 } */
 
 
-.form{
+.email{
     display: flex;
 }
 .item1{
@@ -81,7 +81,7 @@ input[type=email]{
     margin-bottom: 20px;
     
 }
-.logo{
+.my-logo{
     margin-top: 0%;
     padding-bottom: 10px;
     object-position: center bottom;
@@ -94,7 +94,7 @@ input[type=email]{
 .reviews{
     color: white;
 }
-.icons{
+.stars{
     margin-left: 15px;
 }
 
@@ -105,24 +105,29 @@ input[type=email]{
 }
 
 
-a{
+.my-link{
     text-decoration: none;
     color: white;
     margin: 5px;
 }
-img{
+.img-size{
     height: 30px;
     margin-left: 25px;
 }
 .cookie-img{
-    height: 70px;
-    /* position: static; */
+    position: static;
+    height: 45px;
+    margin-top: 7px;
 }
 .foot{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     margin-bottom: -2.57%;
+    width: 100%;
+    margin-left: -0.5em;
+
+
 
 }
 .cookies{
@@ -179,7 +184,8 @@ img{
     margin-top: 5%;
     height: 70px;
     /* background-color: gold; */
-    margin-bottom: -3%;
+    margin-bottom: -0.5em;
+    margin-right: -0.5em;
 }
 @keyframes chipLighter {
     0% {
